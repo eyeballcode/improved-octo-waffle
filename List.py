@@ -86,3 +86,7 @@ class List():
     def filter(self, function):
         self.array = list(filter(function, self.array))
         return self
+
+    def reduce(self, function, *args):
+        initializer = 0 if len(args) < 1 else args[0]
+        return reduce(function, self.array, initializer)
