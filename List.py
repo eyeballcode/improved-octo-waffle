@@ -89,4 +89,6 @@ class List():
 
     def reduce(self, function, *args):
         initializer = 0 if len(args) < 1 else args[0]
+        if 'reduce' not in globals():
+            from functools import reduce
         return reduce(function, self.array, initializer)
