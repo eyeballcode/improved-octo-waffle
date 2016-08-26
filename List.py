@@ -19,6 +19,10 @@ class List():
     def __repr__(self):
         return str(self.array)
 
+    def __iter__(self):
+        return (x for x in self.array)
+
+
     def get_array(self):
         return self.array
     
